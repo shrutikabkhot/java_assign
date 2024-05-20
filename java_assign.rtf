@@ -1,0 +1,2584 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Consolas;}{\f1\fnil\fcharset0 Consolas;}{\f2\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red127\green0\blue85;\red0\green0\blue0;\red0\green0\blue192;\red63\green127\blue95;\red106\green62\blue62;\red42\green0\blue255;\red100\green100\blue100;\red127\green159\blue191;\red212\green212\blue212;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs28\lang9\par
+\cf1\b\f1\lang1033  1.Write a program to maintain student information. For each student store studid, name, m1, \par
+m2 and m3 (marks of 3 subjects ). Accept information for 2 students and display it as \par
+follows.\par
+Student Details:\par
+____________\par
+Student Id\par
+ Name: Divya\par
+M1 : 78\par
+M2: 86\par
+M3: 89\par
+\f0\lang9 public\cf2\b0  \cf1\b class\cf2\b0  Student \{\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 sid\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 sname\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b float\cf2\b0  \cf3 m1\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b float\cf2\b0  \cf3 m2\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b float\cf2\b0  \cf3 m3\cf2 ;\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf4 //Default Constructor\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Student()\cf0\par
+\cf2\tab\{\cf0\par
+\cf2\tab\tab\cf3 sid\cf2 =0;\cf0\par
+\cf2\tab\tab\cf3 sname\cf2 =\cf1\b null\cf2\b0 ;\cf0\par
+\cf2\tab\tab\cf3 m1\cf2 =0;\cf0\par
+\cf2\tab\tab\cf3 m2\cf2 =0;\cf0\par
+\cf2\tab\tab\cf3 m3\cf2 =0;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf4 //Parameterized Constructor\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Student(\cf1\b int\cf2\b0  \cf5 sid\cf2 ,String \cf5 sname\cf2 ,\cf1\b float\cf2\b0  \cf5 m1\cf2 ,\cf1\b float\cf2\b0  \cf5 m2\cf2 ,\cf1\b float\cf2\b0  \cf5 m3\cf2 )\cf0\par
+\cf2\tab\{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 sid\cf2 =\cf5 sid\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 sname\cf2 =\cf5 sname\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 m1\cf2 =\cf5 m1\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 m2\cf2 =\cf5 m2\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 m3\cf2 =\cf5 m3\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf4 //setters and getters for all class members\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getSid() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 sid\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setSid(\cf1\b int\cf2\b0  \cf5 sid\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 sid\cf2  = \cf5 sid\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getSname() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 sname\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setSname(String \cf5 sname\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 sname\cf2  = \cf5 sname\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b float\cf2\b0  getM1() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 m1\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setM1(\cf1\b float\cf2\b0  \cf5 m1\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 m1\cf2  = \cf5 m1\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b float\cf2\b0  getM2() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 m2\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setM2(\cf1\b float\cf2\b0  \cf5 m2\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 m2\cf2  = \cf5 m2\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b float\cf2\b0  getM3() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 m3\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setM3(\cf1\b float\cf2\b0  \cf5 m3\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 m3\cf2  = \cf5 m3\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String toString()\cf0\par
+\cf2\tab\{\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Students Details: "\cf2 );\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "--------------------------"\cf2 );\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 ""\cf2 );\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf6 "Student Id : "\cf2 +\cf3 sid\cf2 +\cf6 "\\nName: "\cf2 +\cf3 sname\cf2 +\cf6 "\\nM1: "\cf2 +\cf3 m1\cf2 +\cf6 "\\nM2: "\cf2 +\cf3 m2\cf2 +\cf6 "\\nM3: "\cf2 +\cf3 m3\cf2 +\cf6 "\\n"\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\}\cf0\par
+\f2\fs22\par
+\cf1\b\f0\fs28 import\cf2\b0  java.util.Scanner;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  StudentService \{\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  addStudentDetails(Student[] \cf5 student\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab Scanner \cf5\ul scn\cf2\ulnone =\cf1\b new\cf2\b0  Scanner(System.\cf3\b\i in\cf2\b0\i0 );\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf5 i\cf2 =0;\cf5 i\cf2 <\cf5 student\cf2 .\cf3 length\cf2 ;\cf5 i\cf2 ++)\cf0\par
+\cf2\tab\tab\{\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter Student Id: "\cf2 );\cf0\par
+\cf2\tab\tab\tab\cf1\b int\cf2\b0  \cf5 id\cf2 =\cf5 scn\cf2 .nextInt();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter Student Name: "\cf2 );\cf0\par
+\cf2\tab\tab\tab String \cf5 name\cf2 =\cf5 scn\cf2 .next();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter Marks 1"\cf2 );\cf0\par
+\cf2\tab\tab\tab\cf1\b float\cf2\b0  \cf5 m1\cf2 =\cf5 scn\cf2 .nextFloat();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter Marks 2"\cf2 );\cf0\par
+\cf2\tab\tab\tab\cf1\b float\cf2\b0  \cf5 m2\cf2 =\cf5 scn\cf2 .nextFloat();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter Marks 3"\cf2 );\cf0\par
+\cf2\tab\tab\tab\cf1\b float\cf2\b0  \cf5 m3\cf2 =\cf5 scn\cf2 .nextFloat();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\tab\cf5 student\cf2 [\cf5 i\cf2 ] = \cf1\b new\cf2\b0  Student(\cf5 id\cf2 ,\cf5 name\cf2 ,\cf5 m1\cf2 ,\cf5 m2\cf2 ,\cf5 m3\cf2 );\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  displayStudentDetails(Student[] \cf5 student\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf5 i\cf2 =0;\cf5 i\cf2 <\cf5 student\cf2 .\cf3 length\cf2 ;\cf5 i\cf2 ++)\cf0\par
+\cf2\tab\tab\{\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf5 student\cf2 [\cf5 i\cf2 ]);\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\}\par
+\cf0\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  TestStudent \{\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String[] \cf5 args\cf2 ) \{\cf0\par
+\cf2\tab\tab Student [] \cf5 student\cf2  = \cf1\b new\cf2\b0  Student[2];\cf0\par
+\cf2\tab\tab StudentService.\i addStudentDetails\i0 (\cf5 student\cf2 );\cf0\par
+\cf2\tab\tab StudentService.\i displayStudentDetails\i0 (\cf5 student\cf2 );\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\}\cf0\par
+\cf2\}\par
+\par
+\f1\lang1033 2)Write a menu driven program to maintain student information. Modify Student class \par
+created in previous assignment. Add a member gpa in student class, add a function in \par
+student class to return GPA of a student\par
+ calculateGPA()\par
+ gpa=(1/3)*m1+(1/2)*m2+(1/4)*m3\par
+Create an array to store Multiple students.\par
+1. Display All Student\par
+2. Search by id\par
+3. Search by name\par
+4. calculate GPA of a student\par
+5. Exit\par
+Write a menu driven program to maintain student information. Modify Student class \par
+created in previous assignment. Add a member gpa in student class, add a function in \par
+student class to return GPA of a student\par
+ calculateGPA()\par
+ gpa=(1/3)*m1+(1/2)*m2+(1/4)*m3\par
+Create an array to store Multiple students.\par
+1. Display All Student\par
+2. Search by id\par
+3. Search by name\par
+4. calculate GPA of a student\par
+5. ExiWrite a menu driven program to maintain student information. Modify Student class \par
+created in previous assignment. Add a member gpa in student class, add a function in \par
+student class to return GPA of a student\par
+ calculateGPA()\par
+ gpa=(1/3)*m1+(1/2)*m2+(1/4)*m3\par
+Create an array to store Multiple students.\par
+1. Display All Student\par
+2. Search by id\par
+3. Search by name\par
+4. calculate GPA of a student\par
+5. ExiWrite a menu driven program to maintain student information. Modify Student class \par
+created in previous assignment. Add a member gpa in student class, add a function in \par
+student class to return GPA of a student\par
+ calculateGPA()\par
+ gpa=(1/3)*m1+(1/2)*m2+(1/4)*m3\par
+Create an array to store Multiple students.\par
+1. Display All Student\par
+2. Search by id\par
+3. Search by name\par
+4. calculate GPA of a student\par
+5. Exit\par
+student->\par
+\cf1\b\f0 package\cf2\b0  com.demo.beans;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  Student \{\cf0\par
+\cf2   \cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 id\cf2 ;\cf0\par
+\cf2   \cf1\b private\cf2\b0  String \cf3 name\cf2 ;\cf0\par
+\cf2   \cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 m1\cf2 ,\cf3 m2\cf2 ,\cf3 m3\cf2 ;\cf0\par
+\cf2   \cf1\b private\cf2\b0  \cf1\b float\cf2\b0  \cf3 gpa\cf2 ;\cf0\par
+\cf1\b public\cf2\b0  Student(\cf1\b int\cf2\b0  \cf5 id\cf2 , String \cf5 name\cf2 , \cf1\b int\cf2\b0  \cf5 m1\cf2 , \cf1\b int\cf2\b0  \cf5 m2\cf2 , \cf1\b int\cf2\b0  \cf5 m3\cf2 ) \{\cf0\par
+\cf2\tab\cf1\b super\cf2\b0 ();\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 id\cf2  = \cf5 id\cf2 ;\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 m1\cf2  = \cf5 m1\cf2 ;\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 m2\cf2  = \cf5 m2\cf2 ;\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 m3\cf2  = \cf5 m3\cf2 ;\cf0\par
+\par
+\cf2\tab\}\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b float\cf2\b0  getGpa() \{\cf0\par
+\cf2\tab\cf1\b return\cf2\b0  \cf3 gpa\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setGpa(\cf1\b float\cf2\b0  \cf5 gpa\cf2 ) \{\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 gpa\cf2  = \cf5 gpa\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getId() \{\cf0\par
+\cf2\tab\cf1\b return\cf2\b0  \cf3 id\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setId(\cf1\b int\cf2\b0  \cf5 id\cf2 ) \{\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 id\cf2  = \cf5 id\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  String getName() \{\cf0\par
+\cf2\tab\cf1\b return\cf2\b0  \cf3 name\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setName(String \cf5 name\cf2 ) \{\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getM1() \{\cf0\par
+\cf2\tab\cf1\b return\cf2\b0  \cf3 m1\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setM1(\cf1\b int\cf2\b0  \cf5 m1\cf2 ) \{\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 m1\cf2  = \cf5 m1\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getM2() \{\cf0\par
+\cf2\tab\cf1\b return\cf2\b0  \cf3 m2\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setM2(\cf1\b int\cf2\b0  \cf5 m2\cf2 ) \{\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 m2\cf2  = \cf5 m2\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getM3() \{\cf0\par
+\cf2\tab\cf1\b return\cf2\b0  \cf3 m3\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setM3(\cf1\b int\cf2\b0  \cf5 m3\cf2 ) \{\cf0\par
+\cf2\tab\cf1\b this\cf2\b0 .\cf3 m3\cf2  = \cf5 m3\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\par
+\cf7 @Override\cf0\par
+\cf1\b public\cf2\b0  String toString() \{\cf0\par
+\cf2\tab\cf1\b return\cf2\b0  \cf6 "Student Id: "\cf2 +\cf3 id\cf2 +\cf6 "\\n"\cf2 +\cf6 "Name :"\cf2 +\cf3 name\cf2 +\cf6 "\\n"\cf2 +\cf6 "m1 = "\cf2 +\cf3 m1\cf2 +\cf6 "\\n"\cf2 +\cf6 "m2 = "\cf2 +\cf3 m2\cf2 +\cf6 "\\n"\cf2 +\cf6 "m3 = "\cf2 +\cf3 m3\cf2 ;\cf0\par
+\cf2\}\cf0\par
+\cf2   \cf0\par
+\cf2   \cf0\par
+\cf2\}\cf0\par
+\f1 studentDao\par
+\cf1\b\f0 package\cf2\b0  com.demo.dao;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  StudentDao \{\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  display();\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  search(\cf1\b int\cf2\b0  \cf5 id\cf2 );\cf0\par
+\cf2   \cf1\b void\cf2\b0  searchName(String \cf5 n\cf2 );\cf0\par
+\par
+\cf1\b void\cf2\b0  calculate();\cf0\par
+\par
+\par
+\cf2\}\cf0\par
+\f1 studentdaoimpl\par
+\cf1\b\f0 package\cf2\b0  com.demo.dao;\cf0\par
+\cf1\b import\cf2\b0  com.demo.beans.Student;\cf0\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  StudentDaoImpl \cf1\b implements\cf2\b0  StudentDao \{\cf0\par
+\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b static\cf2\b0  Student \cf3\i std\cf2\i0 [] = \cf1\b new\cf2\b0  Student[2]; \cf0\par
+\cf2\tab\cf1\b static\cf2\b0  \{\cf0\par
+\cf2\tab\cf3\i std\cf2\i0 [0] = \cf1\b new\cf2\b0  Student(1,\cf6 "Tom"\cf2 ,10,20,30);\cf0\par
+\cf2\tab\cf3\i std\cf2\i0 [1] = \cf1\b new\cf2\b0  Student(2,\cf6 "Jerry"\cf2 , 40,50,60);\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  display() \{\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0  (Student \cf5 s\cf2 : \cf3\i std\cf2\i0 ) \{\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf5 s\cf2 );\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  search(\cf1\b int\cf2\b0  \cf5 id\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf5 i\cf2  =0 ; \cf5 i\cf2 <\cf3\i std\cf2\i0 .\cf3 length\cf2  ; \cf5 i\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\cf1\b if\cf2\b0  (\cf3\i std\cf2\i0 [\cf5 i\cf2 ].getId() == \cf5 id\cf2 ) \{ \cf0\par
+\cf2\tab\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf3\i std\cf2\i0 [\cf5 i\cf2 ]);\cf0\par
+\cf2\tab\tab\tab\}\tab\tab\tab\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  searchName(String \cf5 n\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf5 i\cf2  = 0 ; \cf5 i\cf2 < \cf3\i std\cf2\i0 .\cf3 length\cf2 ; \cf5 i\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\cf1\b if\cf2\b0  (\cf3\i std\cf2\i0 [\cf5 i\cf2 ].getName().equals(\cf5 n\cf2 )) \{\cf0\par
+\cf2\tab\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf3\i std\cf2\i0 [\cf5 i\cf2 ]);\cf0\par
+\cf2\tab\tab\tab\}\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  calculate() \{\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf5 i\cf2  = 0; \cf5 i\cf2  < \cf3\i std\cf2\i0 .\cf3 length\cf2 ; \cf5 i\cf2 ++) \{\cf0\par
+\cf2\tab\tab\cf1\b float\cf2\b0  \cf5 marks\cf2  = \cf3\i std\cf2\i0 [\cf5 i\cf2 ].getM1() + \cf3\i std\cf2\i0 [\cf5 i\cf2 ].getM2() + \cf3\i std\cf2\i0 [\cf5 i\cf2 ].getM3(); \cf0\par
+\cf2\tab\tab\cf1\b float\cf2\b0  \cf5 gpa\cf2  = (\cf5 marks\cf2 *3)/100;\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "gpa of "\cf2 +\cf3\i std\cf2\i0 [\cf5 i\cf2 ].getName()+\cf6 "= "\cf2  + \cf5 gpa\cf2 );\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 studentservice\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  StudentService \{\cf0\par
+\cf2\tab\cf1\b void\cf2\b0  displayAll();\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  searchId(\cf1\b int\cf2\b0  \cf5 id\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  searchName(String \cf5 name\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  CalulateGPA();\cf0\par
+\par
+\par
+\par
+\cf2\}\cf0\par
+\f1 studentserviceimpl\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\cf1\b import\cf2\b0  com.demo.dao.*;\cf0\par
+\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  StudentServiceImpl \cf1\b implements\cf2\b0  StudentService \{\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  StudentDao \cf3 sd\cf2 ;\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  StudentServiceImpl() \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 sd\cf2  = \cf1\b new\cf2\b0  StudentDaoImpl();\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  displayAll() \{\cf0\par
+\cf2\tab\tab\cf3 sd\cf2 .display();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  searchId(\cf1\b int\cf2\b0  \cf5 id\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\cf3 sd\cf2 .search(\cf5 id\cf2 );\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  searchName(String \cf5 name\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\cf3 sd\cf2 .searchName(\cf5 name\cf2 );\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  CalulateGPA() \{\cf0\par
+\cf2\tab\tab\cf3 sd\cf2 .calculate();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 teststudent\par
+package com.demo.test;\par
+import com.demo.beans.*;\par
+import java.util.Scanner;\par
+import com.demo.service.*;\par
+\par
+public class TestStudent \{\par
+\par
+\tab public static void main (String[] args) \{\par
+\tab\tab\par
+\tab\tab Scanner sc = new Scanner(System.in);\par
+\tab\par
+\tab\tab int choice;\par
+\tab\tab do \{\par
+\tab\tab StudentService ss = new StudentServiceImpl();\par
+\tab\tab System.out.println("press \\n 1. Display All \\n2.Search by ID\\n3.search by Name\\n 4.Calculate GPA\\n5.Exit");\par
+\tab\tab  choice = sc.nextInt();\par
+\tab\tab\par
+\tab\tab switch(choice) \{\par
+\tab\tab case 1:\par
+\tab\tab\tab ss.displayAll();\par
+\tab\tab\tab break;\par
+\tab\tab case 2 :\par
+\tab\tab\tab System.out.println("Enter ID TO search");\par
+\tab\tab\tab int id = sc.nextInt();\par
+\tab\tab\tab\par
+\tab\tab\tab ss.searchId(id);\par
+\tab\tab\tab break;\par
+\tab\tab case 3 :\par
+\tab\tab\tab System.out.println("Enter Name to searach");\par
+\tab\tab\tab String name = sc.next();\par
+\tab\tab\tab\par
+\tab\tab\tab ss.searchName(name);\par
+\tab\tab\tab break;\par
+\tab\tab case 4 :\par
+\tab\tab\tab ss.CalulateGPA();\par
+\tab\tab\tab break;\par
+\tab\tab case 5:\par
+\tab\tab\tab System.out.println("Thank you!");\par
+\tab\tab\tab sc.close();\par
+\tab\tab\tab break;\par
+\tab\tab default:\par
+\tab\tab\tab System.out.println("------- INVALID ------");\par
+\tab\tab\tab break;\par
+\tab\tab\par
+\tab\tab\}\par
+\tab\tab\}while(choice!=5);\par
+\tab\tab\par
+\tab\tab\par
+\tab\tab\par
+\tab\}\par
+\}\par
+\par
+Q2. Write a java program to store information of your friends\par
+id,name,lastname,hobbies,mobno,email,bdate,address\par
+note: hobbies- a friend may have multiple hobbies\par
+Accept all friends details and store it in an array\par
+And do the following.\par
+1. Display All Friend\par
+2. Search by id\par
+3. Search by name\par
+4. Display all friend with a particular hobby \par
+5. Exit\par
+friends\par
+package com.demo.beans;\par
+\par
+import java.time.LocalDate;\par
+import java.util.Arrays;\par
+import java.util.List;\par
+\par
+public class Friends\{\par
+\tab private int id;\par
+\tab private String name;\par
+\tab private String lastname;\par
+\tab private List<String> hobbies;\par
+\tab private long mobno;\par
+\tab private String email;\par
+\tab private LocalDate bdate;\par
+\tab private String address;\par
+\tab\par
+\tab public Friends() \{\par
+\tab\tab super();\par
+\tab\}\par
+\par
+\tab public Friends(int id, String name, String lastname, List<String> hobbies, long mobno, String email,\par
+\tab\tab\tab LocalDate bdate, String address) \{\par
+\tab\tab super();\par
+\tab\tab this.id = id;\par
+\tab\tab this.name = name;\par
+\tab\tab this.lastname = lastname;\par
+\tab\tab this.hobbies = hobbies;\par
+\tab\tab this.mobno = mobno;\par
+\tab\tab this.email = email;\par
+\tab\tab this.bdate = bdate;\par
+\tab\tab this.address = address;\par
+\tab\}\par
+\par
+\tab public int getId() \{\par
+\tab\tab return id;\par
+\tab\}\par
+\par
+\tab public void setId(int id) \{\par
+\tab\tab this.id = id;\par
+\tab\}\par
+\par
+\tab public String getName() \{\par
+\tab\tab return name;\par
+\tab\}\par
+\par
+\tab public void setName(String name) \{\par
+\tab\tab this.name = name;\par
+\tab\}\par
+\par
+\tab public String getLastname() \{\par
+\tab\tab return lastname;\par
+\tab\}\par
+\par
+\tab public void setLastname(String lastname) \{\par
+\tab\tab this.lastname = lastname;\par
+\tab\}\par
+\par
+\tab public List<String> getHobbies() \{\par
+\tab\tab return hobbies;\par
+\tab\}\par
+\par
+\tab public void setHobbies(List<String> hobbies) \{\par
+\tab\tab this.hobbies = hobbies;\par
+\tab\}\par
+\par
+\tab public long getMobno() \{\par
+\tab\tab return mobno;\par
+\tab\}\par
+\par
+\tab public void setMobno(long mobno) \{\par
+\tab\tab this.mobno = mobno;\par
+\tab\}\par
+\par
+\tab public String getEmail() \{\par
+\tab\tab return email;\par
+\tab\}\par
+\par
+\tab public void setEmail(String email) \{\par
+\tab\tab this.email = email;\par
+\tab\}\par
+\par
+\tab public LocalDate getBdate() \{\par
+\tab\tab return bdate;\par
+\tab\}\par
+\par
+\tab public void setBdate(LocalDate bdate) \{\par
+\tab\tab this.bdate = bdate;\par
+\tab\}\par
+\par
+\tab public String getAddress() \{\par
+\tab\tab return address;\par
+\tab\}\par
+\par
+\tab public void setAddress(String address) \{\par
+\tab\tab this.address = address;\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "FriendsData [id=" + id + ", name=" + name + ", lastname=" + lastname + ", hobbies=" + hobbies\par
+\tab\tab\tab\tab + ", mobno=" + mobno + ", email=" + email + ", bdate=" + bdate + ", address=" + address + "]";\par
+\tab\}\par
+\tab\par
+\}\par
+friendsDao\par
+package com.demo.dao;\par
+\par
+import java.util.List;\par
+\par
+import com.demo.beans.Friends;\par
+\par
+public interface FriendsDao \{\par
+\par
+\tab List<Friends> showData();\par
+\par
+\tab Friends findById(int id);\par
+\par
+\tab List<Friends> findByName(String name);\par
+\par
+\tab List<Friends> findByhobby(String hobby);\par
+\par
+\}\par
+friendsdaoimpl\par
+package com.demo.dao;\par
+import java.time.LocalDate;\par
+import java.util.ArrayList;\par
+import java.util.List;\par
+\par
+import com.demo.beans.Friends;\par
+\par
+public class FriendsDaoImpl implements FriendsDao\{\par
+\tab static List<String> hobbies1=List.of("Play-Boy","Writing","Running","Travelling","Trecking");\par
+\tab static List<String> hobbies2=List.of("Singing","Comic" ,"Dancing","Cooking","Trecking");\par
+\tab static List<String> hobbies3=List.of("Comic Reading","Listening","Fighting","arguing");\par
+\tab static List<String> hobbies4=List.of("Cricket","Teaching","Drawing","Travelling","Trecking");\par
+\tab static List<String> hobbies5=List.of("Singing","Writing","Running","Travelling","Painting");\par
+\tab static List<Friends> lst;\par
+\tab static \{\par
+\tab\tab lst=new ArrayList<>();\par
+\tab\tab lst.add(new Friends(101,"Shrutika","Khot",hobbies1,12345,"rushi@123",LocalDate.of(2001, 04,19),"sangli"));\par
+\tab\tab lst.add(new Friends(102,"Rutuja","Patil",hobbies2,54321,"aarti@123",LocalDate.of(2000, 07,28),"Kolhapur"));\par
+\tab\tab lst.add(new Friends(103,"Vrushali","Varankar",hobbies3,75295,"nazmin@123",LocalDate.of(1996, 04,26),"Jalgav"));\par
+\tab\tab lst.add(new Friends(104,"Shivani","Bhopale",hobbies4,67856,"Vivek@123",LocalDate.of(2000, 04,22),"Akola"));\par
+\tab\tab lst.add(new Friends(105,"Navini","Kakade",hobbies5,80975,"Reeva@123",LocalDate.of(2019, 12,26),"Pune"));\par
+\tab\}\par
+\tab\par
+\tab @Override\par
+\tab public List<Friends> showData() \{\par
+\tab\tab return lst;\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public Friends findById(int id) \{\par
+\tab\tab for(Friends f:lst)\par
+\tab\tab\{\par
+\tab\tab\tab if(f!=null)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab if(f.getId()==id)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab return f;\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab return null;\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public List<Friends> findByName(String name) \{\par
+\tab\tab List<Friends> list=new ArrayList<>();\par
+\tab\tab for(Friends f:lst)\par
+\tab\tab\{\par
+\tab\tab\tab if(f!=null)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab if(f.getName().equals(name))\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab list.add(f);\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab if(list.isEmpty())\par
+\tab\tab\tab return null;\par
+\tab\tab else\par
+\tab\tab\tab return list;\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public List<Friends> findByhobby(String hobby) \{\par
+\tab\tab List<Friends> list=new ArrayList<>();\par
+\tab\tab for(Friends f:lst)\par
+\tab\tab\{\par
+\tab\tab\tab if(f!=null)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab if(f.getHobbies().contains(hobby))\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab list.add(f);\par
+\tab\tab\tab\tab\}\tab\tab\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab if(list.isEmpty())\par
+\tab\tab\tab return null;\par
+\tab\tab else\par
+\tab\tab\tab return list;\par
+\tab\}\par
+\tab\par
+\}\par
+service\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\par
+\cf1\b import\cf2\b0  java.util.List;\cf0\par
+\par
+\cf1\b import\cf2\b0  com.demo.beans.Friends;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  FriendsService \{\cf0\par
+\par
+\cf2\tab List<Friends> DisplayAllData();\cf0\par
+\par
+\cf2\tab Friends searchById(\cf1\b int\cf2\b0  \cf5 id\cf2 );\cf0\par
+\par
+\cf2\tab List<Friends> searchByName(String \cf5 name\cf2 );\cf0\par
+\par
+\cf2\tab List<Friends> searchByhobby(String \cf5 hobby\cf2 );\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 serviceiml\par
+package com.demo.service;\par
+import com.demo.dao.FriendsDao;\par
+\par
+import java.util.List;\par
+\par
+import com.demo.beans.Friends;\par
+import com.demo.dao.FriendsDaoImpl;\par
+\par
+public class FriendsServiceImpl implements FriendsService \{\par
+\tab\par
+\tab\tab FriendsDao fdao;\par
+\tab\tab public FriendsServiceImpl() \{\par
+\tab\tab\tab fdao=new FriendsDaoImpl();\par
+\tab\tab\}\par
+\par
+\par
+\tab public List<Friends> DisplayAllData() \{\par
+\tab\tab return fdao.showData();\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public Friends searchById(int id) \{\par
+\tab\tab return fdao.findById(id);\par
+\tab\}\par
+\par
+\par
+\tab @Override\par
+\tab public List<Friends> searchByName(String name) \{\par
+\tab\tab return fdao.findByName(name);\par
+\tab\}\par
+\par
+\par
+\tab @Override\par
+\tab public List<Friends> searchByhobby(String hobby) \{\par
+\tab\tab return fdao.findByhobby(hobby);\par
+\tab\}\par
+\}\par
+testfriends\par
+package com.demo.test;\par
+import java.util.Scanner;\par
+import com.demo.service.FriendsService;\par
+import com.demo.service.FriendsServiceImpl;\par
+import java.util.List;\par
+import java.util.ArrayList;\par
+\par
+import com.demo.beans.Friends;\par
+\par
+public class TestFriends \{\par
+\tab\par
+\tab public static void main(String[] args)\par
+\tab\{\par
+\tab\tab FriendsService fservice=new FriendsServiceImpl();\par
+\tab\tab Scanner sc=new Scanner(System.in);\par
+\tab\tab int choice=0;\par
+\tab\tab do \{\par
+\tab\tab\tab List<Friends> lst=new ArrayList<>();\par
+\tab\tab\tab System.out.println("Enter choice: ");\par
+\tab\tab\tab System.out.println("1. Display All Student\\n2. Search by id\\n3. Search by name");\par
+\tab\tab\tab System.out.println("4.  Display all friend with a particular hobby \\n5. Exit");\par
+\tab\tab\tab choice=sc.nextInt();\par
+\tab\tab\tab switch(choice)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab case 1:\par
+\tab\tab\tab\tab\tab lst=fservice.DisplayAllData();\par
+\tab\tab\tab\tab\tab if(lst!=null)\par
+\tab\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab\tab lst.forEach(System.out::println);\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab else\par
+\tab\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab\tab System.out.println("Nothing to display");\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab case 2:\par
+\tab\tab\tab\tab\tab System.out.println("Enter id: ");\par
+\tab\tab\tab\tab\tab int id=sc.nextInt();\par
+\tab\tab\tab\tab\tab Friends f=fservice.searchById(id);\par
+\tab\tab\tab\tab\tab if(f!=null)\par
+\tab\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab\tab System.out.println(f);\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab else\par
+\tab\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab\tab System.out.println("Id not found");\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab case 3:\par
+\tab\tab\tab\tab\tab System.out.println("Enter name: ");\par
+\tab\tab\tab\tab\tab String name=sc.next();\par
+\tab\tab\tab\tab\tab lst=fservice.searchByName(name);\par
+\tab\tab\tab\tab\tab if(lst!=null) \{\par
+\tab\tab\tab\tab\tab\tab lst.forEach(System.out::println);\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab else\par
+\tab\tab\tab\tab\tab\tab System.out.println("Not found");\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab case 4:\par
+\tab\tab\tab\tab\tab System.out.println("Enter hobby: ");\par
+\tab\tab\tab\tab\tab String hobby=sc.next();\par
+\tab\tab\tab\tab\tab lst=fservice.searchByhobby(hobby);\par
+\tab\tab\tab\tab\tab if(lst!=null) \{\par
+\tab\tab\tab\tab\tab\tab lst.forEach(System.out::println);\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab else\par
+\tab\tab\tab\tab\tab\tab System.out.println("Not found");\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab case 5:\par
+\tab\tab\tab\tab\tab sc.close();\par
+\tab\tab\tab\tab\tab System.out.println("Thank you for visiting !!!");\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab default:\par
+\tab\tab\tab\tab\tab System.out.println("Invalid choice");\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\}\par
+\tab\tab\}while(choice!=5);\par
+\tab\tab\par
+\tab\}\par
+\}\par
+\par
+Q4. Use employee class to store id,name,sal,dept and designation. \par
+a. Use HashSet to store multiple employee objects. Add required functions in the appropriate \par
+class.\par
+No duplicate employee entries are allowed.\par
+-2 Employee objects are same if their id is same \par
+b. b. Use Treemap to store multiple Employee objects. Add required functions in the \par
+appropriate class\par
+beans:employee\par
+\cf1\b\f0 package\cf2\b0  com.demo.beans;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  Employee \{\cf0\par
+\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 id\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 name\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b double\cf2\b0  \cf3 sal\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 dept\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 desg\cf2 ;\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Employee(\cf1\b int\cf2\b0  \cf5 id\cf2 , String \cf5 name\cf2 , \cf1\b double\cf2\b0  \cf5 sal\cf2 , String \cf5 dept\cf2 , String \cf5 desg\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b super\cf2\b0 ();\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 id\cf2  = \cf5 id\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 sal\cf2  = \cf5 sal\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 dept\cf2  = \cf5 dept\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 desg\cf2  = \cf5 desg\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getId() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 id\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setId(\cf1\b int\cf2\b0  \cf5 id\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 id\cf2  = \cf5 id\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getName() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 name\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setName(String \cf5 name\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b double\cf2\b0  getSal() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 sal\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setSal(\cf1\b double\cf2\b0  \cf5 sal\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 sal\cf2  = \cf5 sal\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getDept() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 dept\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setDept(String \cf5 dept\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 dept\cf2  = \cf5 dept\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getDesg() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 desg\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setDesg(String \cf5 desg\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 desg\cf2  = \cf5 desg\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String toString() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf6 "Employee [id="\cf2  + \cf3 id\cf2  + \cf6 ", name="\cf2  + \cf3 name\cf2  + \cf6 ", sal="\cf2  + \cf3 sal\cf2  + \cf6 ", dept="\cf2  + \cf3 dept\cf2  + \cf6 ", desg="\cf2  + \cf3 desg\cf2  + \cf6 "]"\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\}\cf0\par
+\f1 employeedao\par
+\cf1\b\f0 package\cf2\b0  com.demo.dao;\cf0\par
+\par
+\cf1\b import\cf2\b0  com.demo.beans.Employee;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  EmployeeDao \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addAll(Employee \cf5 e\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  display();\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 empdaoimpl\par
+package com.demo.dao;\par
+\par
+import java.util.HashSet;\par
+import java.util.Set;\par
+\par
+import com.demo.beans.Employee;\par
+\par
+public class EmployeeDaoImpl implements EmployeeDao\{\par
+\tab\par
+\tab static Set<Employee> empset;\par
+\tab\par
+\tab static \{\par
+\tab\tab empset = new HashSet<>();\par
+\tab\}\par
+\tab\par
+\tab @Override\par
+\tab public boolean addAll(Employee e) \{\par
+\tab\tab return empset.add(e);\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void display() \{\par
+\tab\tab empset.stream().forEach(System.out::println);\par
+\tab\}\par
+\}\par
+treedao\par
+\cf1\b\f0 package\cf2\b0  com.demo.dao;\cf0\par
+\par
+\cf1\b import\cf2\b0  com.demo.beans.*;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  TreeDao \{\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  display();\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  add(\cf1\b int\cf2\b0  \cf5 id\cf2 , Employee \cf5 e\cf2 );\cf0\par
+\par
+\cf2\tab Employee findId(\cf1\b int\cf2\b0  \cf5 id\cf2 );\cf0\par
+\par
+\par
+\par
+\cf2\}\cf0\par
+\f1 treedaoimpl\par
+package com.demo.dao;\par
+\par
+import com.demo.beans.*;\par
+import java.util.Map;\par
+import java.util.TreeMap;\par
+\par
+public class TreeDaoImpl implements TreeDao \{\par
+\par
+\tab\par
+\tab Map<Integer,Employee> mi = new TreeMap<>();\par
+\tab @Override\par
+\tab public void display() \{\par
+\tab\tab System.out.println(mi);\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public boolean add(int id,Employee e) \{\par
+\tab\tab if(mi.containsKey(id)) \{\par
+\tab\tab\tab return false;\par
+\tab\tab\}\par
+\tab\tab mi.put(id, e);\par
+\tab\tab return true;\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public Employee findId(int id) \{\par
+\tab\tab if(mi.containsKey(id)) \{\par
+\tab\tab\tab return mi.get(id);\par
+\tab\tab\}\par
+\tab\tab return null;\par
+\tab\}\par
+  \par
+\}\par
+empservice\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  EmployeeService \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addEmp();\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  displayAll();\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 empserviceimpl\par
+package com.demo.service;\par
+\par
+import com.demo.dao.*;\par
+import java.util.Scanner;\par
+import com.demo.beans.*;\par
+public class EmployeeServiceImpl implements EmployeeService\{\par
+private EmployeeDao edao;\par
+\par
+\tab public  EmployeeServiceImpl() \par
+\tab\{\par
+\tab edao = new EmployeeDaoImpl();\par
+\tab\}\par
+\tab\par
+\tab @Override\par
+\tab public boolean addEmp() \{\par
+\tab\tab Scanner sc = new Scanner(System.in);\par
+\tab\tab\par
+\tab\tab System.out.println("Enter id:");\par
+\tab\tab int id = sc.nextInt();\par
+\tab\tab System.out.println("Enter name:");\par
+\tab\tab String nm = sc.next();\par
+\tab\tab System.out.println("Enter Salary:");\par
+\tab\tab double salary = sc.nextDouble();\par
+\tab\tab System.out.println("Enter department:");\par
+\tab\tab String dept = sc.next();\par
+\tab\tab System.out.println("Enter Desgignation:");\par
+\tab\tab String desg = sc.next();\par
+\tab\tab\par
+\tab\tab Employee e = new Employee(id,nm,salary,dept,desg);\par
+\tab\tab\tab return edao.addAll(e);\par
+\tab\}\par
+\tab\par
+\tab @Override\par
+\tab public void displayAll() \{\par
+\tab\tab edao.display();\par
+\tab\}\tab\par
+\}\par
+treeservice\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\par
+\par
+\par
+\cf1\b import\cf2\b0  com.demo.beans.*;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  TreeService \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addEmp();\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  displaayAll();\cf0\par
+\par
+\cf2\tab Employee displayId(\cf1\b int\cf2\b0  \cf5 id\cf2 );\cf0\par
+\par
+\cf2\tab\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 treeserviceimpl\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\par
+\cf1\b import\cf2\b0  java.util.Scanner;\cf0\par
+\par
+\cf1\b import\cf2\b0  com.demo.beans.*;\cf0\par
+\cf1\b import\cf2\b0  com.demo.dao.*;\cf0\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  TreeServiceImpl \cf1\b implements\cf2\b0  TreeService\{\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  TreeDao \cf3 tdao\cf2 ;\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  TreeServiceImpl() \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 tdao\cf2 =\cf1\b new\cf2\b0  TreeDaoImpl();\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b boolean\cf2\b0  addEmp() \{\cf0\par
+\cf2\tab\tab Scanner \cf5\ul sc\cf2\ulnone  = \cf1\b new\cf2\b0  Scanner(System.\cf3\b\i in\cf2\b0\i0 );\cf0\par
+\cf2\tab\tab\cf1\b while\cf2\b0 (\cf1\b true\cf2\b0 ) \{\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter id:"\cf2 );\cf0\par
+\cf2\tab\tab\cf1\b int\cf2\b0  \cf5 id\cf2  = \cf5 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter name:"\cf2 );\cf0\par
+\cf2\tab\tab String \cf5 nm\cf2  = \cf5 sc\cf2 .next();\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter Salary:"\cf2 );\cf0\par
+\cf2\tab\tab\cf1\b double\cf2\b0  \cf5 salary\cf2  = \cf5 sc\cf2 .nextDouble();\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter department:"\cf2 );\cf0\par
+\cf2\tab\tab String \cf5 dept\cf2  = \cf5 sc\cf2 .next();\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Enter Desgignation:"\cf2 );\cf0\par
+\cf2\tab\tab String \cf5 desg\cf2  = \cf5 sc\cf2 .next();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab Employee \cf5 e\cf2  = \cf1\b new\cf2\b0  Employee(\cf5 id\cf2 ,\cf5 nm\cf2 ,\cf5 salary\cf2 ,\cf5 dept\cf2 ,\cf5 desg\cf2 );\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf6 "Youo want to add y/n"\cf2 );\cf0\par
+\cf2\tab\tab String \cf5\ul s\cf2\ulnone  = \cf5 sc\cf2 .next();\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 tdao\cf2 .add(\cf5 id\cf2 ,\cf5 e\cf2 );\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  displaayAll() \{\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\tab\cf3 tdao\cf2 .display();\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Employee displayId(\cf1\b int\cf2\b0  \cf5 id\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf4 // \cf8\b TODO\cf4\b0  Auto-generated method stub\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 tdao\cf2 .findId(\cf5 id\cf2 );\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\}\cf0\par
+\f1 testemp\par
+package com.demo.test;\par
+import com.demo.service.*;\par
+import java.util.Scanner;\par
+\par
+public class TestEmployee \{\par
+\tab\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Scanner sc=new Scanner(System.in);\par
+\tab\tab EmployeeService emps=new EmployeeServiceImpl();\par
+\tab\tab int choice = 0;\par
+\tab\tab do\par
+\tab\tab\{\par
+\tab\tab\tab System.out.println("1)Add\\n 2)Display \\n 3)Exit");\par
+\tab\tab\tab choice=sc.nextInt();\par
+\tab\tab\tab switch(choice)\par
+\tab\tab\tab\{\par
+\tab\tab\tab case 1:\par
+\tab\tab\tab\tab boolean status=emps.addEmp();\par
+\tab\tab\tab\tab if(status)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab System.out.println("Added sucessfully!");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab else\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab System.out.println("Null!");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab case 2:\par
+\tab\tab\tab\tab emps.displayAll();\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab default:\par
+\tab\tab\tab\tab\tab System.out.println("Invalid choice");\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\}\par
+\tab\tab\}while(choice!=3);\par
+\tab\}\par
+\}\par
+testtree\par
+package com.demo.test;\par
+\par
+import java.util.Scanner;\par
+\par
+import com.demo.beans.*;\par
+import com.demo.service.*;\par
+public class TestTree \{\par
+  public static void main(String[] args) \{\par
+\tab   Scanner sc = new Scanner(System.in);\par
+\tab\tab TreeService emps = new TreeServiceImpl();\par
+\tab\tab int choice;\par
+\tab\tab do \{\par
+\tab\tab\tab System.out.println("1.add \\n 2.display \\n 3.Find By Id \\n 4.Exit");\par
+\tab\tab\tab choice = sc.nextInt();\par
+\tab\tab\tab switch(choice) \{\par
+\tab\tab\tab case 1:\par
+\tab\tab\tab\tab boolean status = emps.addEmp();\par
+\tab\tab\tab if(status) \{\par
+\tab\tab\tab\tab System.out.println("Added successfully");\par
+\tab\tab\tab\}\par
+\tab\tab\tab else \{\par
+\tab\tab\tab\tab System.out.println("Added Unsuccessfull");\par
+\tab\tab\}\par
+\tab\tab\tab break;\par
+\tab\tab\tab case 2:\par
+\tab\tab\tab\tab emps.displaayAll();\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab case 4: \par
+\tab\tab\tab     System.out.println("Thank you!!");\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab case 3:\par
+\tab\tab\tab\tab System.out.println("Enter id to find Employee");\par
+\tab\tab\tab\tab int id = sc.nextInt();\par
+\tab\tab\tab\tab Employee e1=emps.displayId(id);\par
+\tab\tab\tab\tab System.out.println(e1);\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab default:\par
+\tab\tab\tab\tab System.out.println("invalid no.");\par
+\tab\tab\tab\tab break;\par
+\tab\tab\}\par
+\tab\tab\}while(choice!=3);\par
+  \}\par
+\}\par
+\par
+Write a program to store information about IPL teams in ArrayList\par
+Create Team class to store teamid, tname, coachname, and list of players.\par
+and perform following operations\par
+1. add new Team\par
+2. delete a team\par
+3. delete a player from team(accept player id to delete)\par
+4. display all batsman\par
+5. display all player with a speciality(accept speciality from user)\par
+6. add a new player in a team\par
+7. modify coach of a team\par
+8. exit\par
+teams\par
+\cf1\b\f0 package\cf2\b0  com.demo.beans;\cf0\par
+\par
+\cf1\b import\cf2\b0  java.util.List;\cf0\par
+\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  Teams \{\cf0\par
+\cf2\tab  \cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 teamid\cf2 ;\cf0\par
+\cf2\tab  \cf1\b private\cf2\b0  String \cf3 tname\cf2 ;\cf0\par
+\cf2\tab  \cf1\b private\cf2\b0  String \cf3 coachname\cf2 ;\cf0\par
+\cf2\tab  \cf1\b private\cf2\b0  List<String> \cf3 players\cf2 ;\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Teams(\cf1\b int\cf2\b0  \cf5 teamid\cf2 , String \cf5 tname\cf2 , String \cf5 coachname\cf2 , List<String> \cf5 players\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b super\cf2\b0 ();\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 teamid\cf2  = \cf5 teamid\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 tname\cf2  = \cf5 tname\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 coachname\cf2  = \cf5 coachname\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 players\cf2  = \cf5 players\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Teams(\cf1\b int\cf2\b0  \cf5 teamid\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 teamid\cf2 =\cf5 teamid\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getTeamid() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 teamid\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setTeamid(\cf1\b int\cf2\b0  \cf5 teamid\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 teamid\cf2  = \cf5 teamid\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getTname() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 tname\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setTname(String \cf5 tname\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 tname\cf2  = \cf5 tname\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getCoachname() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 coachname\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setCoachname(String \cf5 coachname\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 coachname\cf2  = \cf5 coachname\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  List<String> getPlayers() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 players\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setPlayers(List<String> \cf5 players\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 players\cf2  = \cf5 players\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String toString() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf6 "Teams [teamid="\cf2  + \cf3 teamid\cf2  + \cf6 ", tname="\cf2  + \cf3 tname\cf2  + \cf6 ", coachname="\cf2  + \cf3 coachname\cf2  + \cf6 ", players="\cf2  + \cf3 players\cf0\par
+\cf2\tab\tab\tab\tab + \cf6 "]"\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab  \cf0\par
+\cf2\tab  \cf0\par
+\cf2\}\cf0\par
+\f1 teamsdao\par
+\cf1\b\f0 package\cf2\b0  com.demo.dao;\cf0\par
+\par
+\cf1\b import\cf2\b0  com.demo.beans.*;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  TeamsDao \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addT(Teams \cf5 e\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  displayT();\cf0\par
+\par
+\cf2\tab   \cf1\b boolean\cf2\b0  removePlr(\cf1\b int\cf2\b0  \cf5 id\cf2 , String \cf5 plr\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  removeTeam(\cf1\b int\cf2\b0  \cf5 tid\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addC(\cf1\b int\cf2\b0  \cf5 tid\cf2 , String \cf5 coach\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addPlayer(\cf1\b int\cf2\b0  \cf5 tid\cf2 , String \cf5 pname\cf2 );\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 teamsdaiimpl\par
+package com.demo.dao;\par
+\par
+import java.util.ArrayList;\par
+import java.util.List;\par
+\par
+import com.demo.beans.*;\par
+\par
+public class TeamsDaoImpl implements TeamsDao\{\par
+\par
+\tab static List<Teams> list ;\par
+\tab\par
+\tab\par
+\tab static \{\par
+\tab list = new ArrayList<>();\par
+\tab\tab\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean addT(Teams e) \{\par
+\tab\tab\par
+\tab\tab return list.add(e);\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void displayT() \{\par
+\tab\tab System.out.println(list);\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public boolean removePlr(int id,String plr) \{\par
+\tab\tab for(Teams t:list) \{\par
+\tab\tab\tab if(id==t.getTeamid()) \{\par
+\tab\tab\tab return t.getPlayers().remove(plr);\par
+\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab return false;\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public boolean removeTeam(int tid) \{\par
+\tab\tab return list.remove(new Teams(tid));\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public boolean addC(int tid,String coach) \{\par
+\tab\tab for(Teams t:list) \{\par
+\tab\tab\tab if(tid==t.getTeamid()) \{\par
+\tab\tab\tab\tab t.setCoachname(coach);\par
+\tab\tab\tab\tab return true;\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab return false;\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public boolean addPlayer(int tid, String pname) \{\par
+\tab\tab for(Teams t:list) \{\par
+\tab\tab\tab if(tid==t.getTeamid()) \{\par
+\tab\tab\tab\tab return t.getPlayers().add(pname);\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab return false;\par
+\tab\}\par
+\par
+\}\par
+teamsservice\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  TeamsService \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addNew();\cf0\par
+\par
+\cf2\tab\cf1\b void\cf2\b0  displayAll();\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  removeP(\cf1\b int\cf2\b0  \cf5 id\cf2 , String \cf5 plr\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  removeT(\cf1\b int\cf2\b0  \cf5 tid\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addCoach(\cf1\b int\cf2\b0  \cf5 tid\cf2 , String \cf5 coach\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addP(\cf1\b int\cf2\b0  \cf5 tid\cf2 , String \cf5 pname\cf2 );\cf0\par
+\par
+\par
+\par
+\cf2\}\cf0\par
+\f1 teamsserviceimpl\par
+package com.demo.service;\par
+\par
+import java.util.List;\par
+import java.util.ArrayList;\par
+import java.util.Scanner;\par
+import com.demo.beans.*;\par
+import com.demo.dao.*;\par
+import com.demo.dao.*;\par
+\par
+public class TeamsServiceImpl implements TeamsService \{\par
+\par
+\tab private TeamsDao tdao;\par
+\tab public TeamsServiceImpl() \{\par
+\tab\tab this.tdao = new TeamsDaoImpl();\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean addNew() \{\par
+\tab\tab Scanner sc = new Scanner(System.in);\par
+\tab\par
+\tab\tab System.out.println("Enter id:");\par
+\tab\tab int teamid = sc.nextInt();\par
+\tab\tab System.out.println("Enter name:");\par
+\tab\tab String tname = sc.next();\par
+\tab\tab System.out.println("Enter coachname:");\par
+\tab\tab String coachname = sc.next();\par
+\tab\tab\par
+\tab\tab  List<String> players= new ArrayList<>();\par
+\tab\tab for(int i=0;i<2;i++)\{\par
+\tab\tab\tab System.out.println("Enter Player name:");\par
+\tab\tab\tab String pname = sc.next();\par
+\tab\tab\tab\par
+\tab\tab\tab  players.add(pname);\par
+\tab\tab\tab  System.out.println("added");\par
+\tab\tab\tab\par
+\tab\tab\}\par
+\tab\tab\par
+\tab\tab Teams e = new Teams(teamid,tname,coachname,players);\par
+\tab\tab System.out.println(e);\par
+\tab\tab return tdao.addT(e);\par
+\tab\}\par
+\tab @Override\par
+\tab public void displayAll() \{\par
+\tab\tab tdao.displayT();\par
+\tab\tab\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean removeP(int id,String plr) \{\par
+\tab\tab return tdao.removePlr(id,plr);\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean removeT(int tid) \{\par
+\tab\tab return tdao.removeTeam(tid);\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean addCoach(int tid,String coach) \{\par
+\tab\tab return tdao.addC(tid,coach);\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean addP(int tid, String pname) \{\par
+\tab\tab return tdao.addPlayer(tid,pname);\par
+\tab\}\par
+\par
+\}\par
+testteams\par
+package com.demo.test;\par
+import java.util.Scanner;\par
+import com.demo.service.*;\par
+/*Write a program to store information about IPL teams in ArrayList\par
+Create Team class to store teamid, tname, coachname, and list of players.\par
+and perform following operations\par
+1. add new Team\par
+2. delete a team\par
+3. delete a player from team(accept player id to delete)\par
+4. display all batsman\par
+5. display all player with a speciality(accept speciality from user)\par
+6. add a new player in a team\par
+7. modify coach of a team\par
+8. exi*/\par
+public class TestTeams \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab\par
+\tab\tab Scanner sc = new Scanner(System.in);\par
+\tab\tab TeamsService ts = new TeamsServiceImpl();\par
+\tab\tab while(true) \{\par
+\tab\tab System.out.println("Enter your choice:");\par
+\tab\tab System.out.println("1.add new team \\n 2.delete a team \\n 3.delete Player from team \\n 4.displayAll batsman \\n 5.add new Player\\n 6.modify coach");\par
+\tab int choice = sc.nextInt();\par
+\tab\tab switch(choice) \{\par
+\tab\tab case 1:\par
+\tab\tab\tab boolean status = ts.addNew();\par
+\tab\tab\tab if(status) \{\par
+\tab\tab\tab\tab System.out.println("Team added Sucessfully:");\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\}else \{\par
+\tab\tab\tab\tab System.out.println("Adding unsucessfull:");\par
+\tab\tab\tab\}\par
+\tab\tab\tab break;\par
+\tab\tab case 2:\par
+\tab\tab\tab System.out.println("Enter teamid to remove Team:");\par
+\tab\tab\tab int tid = sc.nextInt();\par
+\tab\tab\tab boolean st=ts.removeT(tid);\par
+\tab\tab\tab if(st) \{\par
+\tab\tab\tab\tab System.out.println("Removed sucessfull;");\par
+\tab\tab\tab\}\par
+\tab\tab\tab else \{\par
+\tab\tab\tab\tab System.out.println("error");\par
+\tab\tab\tab\}\par
+\tab\tab\tab break;\par
+\tab\tab case 3:\par
+\tab\tab\tab System.out.println("Enter teamid to remove player:");\par
+\tab\tab\tab int id = sc.nextInt();\par
+\tab\tab\tab System.out.println("Enter Player to be removed");\par
+\tab\tab\tab String plr = sc.next();\par
+\tab\tab\tab boolean sts=ts.removeP(id,plr);\par
+\tab\tab\tab if(sts) \{\par
+\tab\tab\tab\tab System.out.println("Removed sucessfull;");\par
+\tab\tab\tab\}\par
+\tab\tab\tab else \{\par
+\tab\tab\tab\tab System.out.println("error");\par
+\tab\tab\tab\}\par
+\tab\tab\tab break;\par
+\tab\tab case 4:\par
+\tab\tab\tab ts.displayAll();\par
+\tab\tab\tab break;\par
+\tab\tab case 5:\par
+\tab\tab\tab System.out.println("Enter teamid to Modify Coach:");\par
+\tab\tab\tab  tid = sc.nextInt();\par
+\tab\tab\tab  System.out.println("Enter player name to add:");\par
+\tab\tab\tab  String pname = sc.next();\par
+\tab\tab\tab  boolean s = ts.addP(tid,pname);\par
+\tab\tab\tab  if(s) \{\par
+\tab\tab\tab\tab  System.out.println("Player added sucessfull");\par
+\tab\tab\tab  \}\par
+\tab\tab\tab  else \{\par
+\tab\tab\tab\tab  System.out.println("error");\par
+\tab\tab\tab  \}\par
+\tab\tab\tab break;\par
+\tab\tab case 6:\par
+\tab\tab\tab System.out.println("Enter teamid to Modify Coach:");\par
+\tab\tab\tab  tid = sc.nextInt();\par
+\tab\tab\tab System.out.println("Enter modifed coachname:");\par
+\tab\tab\tab String coach = sc.next();\par
+\tab\tab\tab boolean b = ts.addCoach(tid,coach);\par
+\tab\tab\tab if(b) \{\par
+\tab\tab\tab\tab System.out.println("Modified Sucessfull:");\par
+\tab\tab\tab\}\par
+\tab\tab\tab else \{\par
+\tab\tab\tab\tab System.out.println("error");\par
+\tab\tab\tab\}\par
+\tab\tab\tab break;\par
+\tab\tab\}\par
+\tab\tab System.out.println("you want to repeat: y/n");\par
+\tab\tab String s = sc.next();\par
+\tab\tab if(s.equals("n")) \{\par
+\tab\tab\tab break;\par
+\tab\tab\tab\par
+\tab\tab\}\par
+\tab\tab\}\par
+\tab\par
+\tab\}\par
+\tab\par
+\par
+\}\par
+\par
+Q10.Write a java program to create a Vector for storing Strings\par
+ Use Enumerator to navigate through Vector\par
+\par
+\par
+import java.util.Enumeration;\par
+import java.util.Vector;\par
+\par
+public class TestEnumVector \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Vector<String> nm = new Vector<>();\par
+\tab\tab nm.add("Shrutika");\par
+\tab\tab nm.add("Vrushali");\par
+\tab\tab nm.add("Rutuja");\par
+\tab\tab nm.add("Shivani");\par
+\tab\tab nm.add("NaviniS");\par
+\tab\tab\par
+\tab\tab Enumeration<String> e= nm.elements();\par
+\tab\tab System.out.println("Displayed Names Using Enum:");\par
+\tab\tab while(e.hasMoreElements()) \{\par
+\tab\tab\tab String name = e.nextElement();\par
+\tab\tab\tab\par
+\tab\tab\tab System.out.println("Name is: "+ name);\par
+\tab\tab\}\par
+\tab\}\par
+\par
+\}\par
+Q11. Write a Java program to store Student information studid, name, degree, email in a ArrayList \par
+at the time of exit write data in a file in csv format\par
+student\par
+\cf1\b\f0 package\cf2\b0  com.demo.beans;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  Student \{\cf0\par
+\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 id\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 name\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 degree\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 email\cf2 ;\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Student(\cf1\b int\cf2\b0  \cf5 id\cf2 , String \cf5 name\cf2 , String \cf5 degree\cf2 , String \cf5 email\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b super\cf2\b0 ();\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 id\cf2  = \cf5 id\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 degree\cf2  = \cf5 degree\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 email\cf2  = \cf5 email\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getId() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 id\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setId(\cf1\b int\cf2\b0  \cf5 id\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 id\cf2  = \cf5 id\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getName() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 name\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setName(String \cf5 name\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getDegree() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 degree\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setDegree(String \cf5 degree\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 degree\cf2  = \cf5 degree\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getEmail() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 email\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setEmail(String \cf5 email\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 email\cf2  = \cf5 email\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String toString() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf6 "Student [id="\cf2  + \cf3 id\cf2  + \cf6 ", name="\cf2  + \cf3 name\cf2  + \cf6 ", degree="\cf2  + \cf3 degree\cf2  + \cf6 ", email="\cf2  + \cf3 email\cf2  + \cf6 "]"\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\}\cf0\par
+\f1 studdao\par
+\cf1\b\f0 package\cf2\b0  com.demo.dao;\cf0\par
+\par
+\cf1\b import\cf2\b0  com.demo.beans.Student;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  StudentDao \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addL(Student \cf5 s\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addF();\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 studdaoimpl\par
+package com.demo.dao;\par
+\par
+import java.io.BufferedWriter;\par
+import java.io.FileWriter;\par
+import java.io.IOException;\par
+import java.util.ArrayList;\par
+import java.util.List;\par
+\par
+import com.demo.beans.Student;\par
+\par
+public class StudentDaoImpl implements StudentDao\{\par
+\tab static List<Student> slist;\par
+\tab static \{\par
+\tab\tab slist=new ArrayList<>();\par
+\tab\}\par
+\tab\par
+\tab @Override\par
+\tab public boolean addL(Student s) \{\par
+\tab\tab\par
+\tab\tab return slist.add(s);\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public boolean addF() \{\par
+\tab\tab try(BufferedWriter bw=new BufferedWriter(new FileWriter("studcsv.txt"));)\par
+\tab\tab\{\par
+\tab\tab\tab for(Student s:slist)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab bw.write(s.getId()+","+s.getName()+","+s.getEmail()+","+s.getDegree()+"\\n");\par
+\tab\tab\tab\}\par
+\tab\tab\} catch (IOException e) \{\par
+\tab\tab\tab // TODO Auto-generated catch block\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\tab return false;\par
+\tab\}\par
+\par
+\}\par
+studservice\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  StudentService \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addInList();\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addInFile();\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 studserviceimpl\par
+package com.demo.service;\par
+\par
+import java.util.Scanner;\par
+\par
+import com.demo.beans.Student;\par
+import com.demo.dao.StudentDao;\par
+import com.demo.dao.StudentDaoImpl;\par
+\par
+public class StudentServiceImpl implements StudentService\{\par
+\tab private StudentDao sdao;\par
+\tab\par
+\tab\par
+\tab public StudentServiceImpl() \{\par
+\tab\tab sdao = new StudentDaoImpl();\par
+\tab\}\par
+\par
+\par
+\tab @Override\par
+\tab public boolean addInList() \{\par
+\tab\tab Scanner sc=new Scanner(System.in);\par
+\tab\tab System.out.println("Enter stud id:");\par
+\tab\tab int id=sc.nextInt();\par
+\tab\tab System.out.println("Enter Student name:");\par
+\tab\tab String name=sc.next();\par
+\tab\tab System.out.println("Enter Student email:");\par
+\tab\tab String email=sc.next();\par
+\tab\tab System.out.println("Enter degree of student:");\par
+\tab\tab String degree=sc.next();\par
+\tab\tab\par
+\tab\tab Student s=new Student(id,name,email,degree);\par
+\tab\tab return sdao.addL(s);\par
+\tab\}\par
+\par
+\par
+\tab @Override\par
+\tab public boolean addInFile() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab return sdao.addF();\par
+\tab\}\par
+\par
+\}\par
+test\par
+package com.demo.test;\par
+import com.demo.service.*;\par
+import java.util.Scanner;\par
+\par
+public class TestStudent \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Scanner sc=new Scanner(System.in);\par
+\tab\tab StudentService Sservice=new StudentServiceImpl();\par
+\tab\tab int choice;\par
+\tab\tab do\par
+\tab\tab\{\par
+\tab\tab\tab System.out.println("Enter choice:"\par
+\tab\tab\tab\tab\tab + "1)Add in list\\n 2)Exit");\par
+\tab\tab\tab choice=sc.nextInt();\par
+\tab\tab\tab switch(choice)\par
+\tab\tab\tab\{\par
+\tab\tab\tab case 1:\par
+\tab\tab\tab\tab boolean status=Sservice.addInList();\par
+\tab\tab\tab\tab if(status)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab System.out.println("Added successfully!");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab else\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab System.out.println("Error");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab case 2:\par
+\tab\tab\tab\tab boolean st=Sservice.addInFile();\par
+\tab\tab\tab\tab if(st)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab System.out.println("Added successfully!");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab else\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab System.out.println("Error");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab default:\par
+\tab\tab\tab\tab\tab System.out.println("Invalid choice!");\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\}\par
+\tab\tab\}while(choice!=2);\par
+\tab\}\par
+\}\par
+\par
+Write another program to read data from file created in Q11. and store it in the ArrayList and \par
+dipsplay all the Students information on the screen.\par
+readDao\par
+package com.demo.dao;\par
+\par
+import java.io.BufferedReader;\par
+import java.io.FileNotFoundException;\par
+import java.io.FileReader;\par
+import java.io.IOException;\par
+import java.util.ArrayList;\par
+import java.util.List;\par
+\par
+public class ReadDao \{\par
+\par
+\tab static List<String> slist;\par
+\tab static \{\par
+\tab\tab slist=new ArrayList<>();\par
+\tab\}\par
+\tab public List<String> displayAll() \{\par
+\tab\tab try(BufferedReader br=new BufferedReader(new FileReader("C:\\\\Users\\\\SHRUTIKA KHOT\\\\eclipse-workspace\\\\AssignQ11_1\\\\studcsv.txt"));)\par
+\tab\tab\{\par
+\tab\tab\tab String s=br.readLine();\par
+\tab\tab\tab while(s!=null)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab slist.add(s);\par
+\tab\tab\tab\tab s=br.readLine();\par
+\tab\tab\tab\}\par
+\tab\tab\} catch (FileNotFoundException e) \{\par
+\tab\tab\tab // TODO Auto-generated catch block\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\} catch (IOException e) \{\par
+\tab\tab\tab // TODO Auto-generated catch block\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\tab return slist;\par
+\tab\}\par
+\}\par
+readtest\par
+package com.demo.test;\par
+\par
+import java.util.List;\par
+\par
+import com.demo.dao.ReadDao;\par
+\par
+public class ReadTest \{\par
+public static void main(String[] args) \{\par
+\tab ReadDao rd=new ReadDao();\par
+\tab List<String> lt=rd.displayAll();\par
+\tab System.out.println(lt);\par
+\}\par
+\}\par
+\par
+Q13. Modify code written in Q11. By using ObjectOutputStream to write data to file\par
+stud\par
+\cf1\b\f0 package\cf2\b0  com.demo.beans;\cf0\par
+\cf1\b import\cf2\b0  java.io.Serializable;\cf0\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  \ul Student\ulnone  \cf1\b implements\cf2\b0  Serializable \{\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 id\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 name\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 degree\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  String \cf3 email\cf2 ;\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Student(\cf1\b int\cf2\b0  \cf5 id\cf2 , String \cf5 name\cf2 , String \cf5 degree\cf2 , String \cf5 email\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b super\cf2\b0 ();\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 id\cf2  = \cf5 id\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 degree\cf2  = \cf5 degree\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 email\cf2  = \cf5 email\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getId() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 id\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  \highlight9 setId\highlight0 (\cf1\b int\cf2\b0  \cf5 id\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 id\cf2  = \cf5 id\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getName() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 name\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setName(String \cf5 name\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getDegree() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 degree\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setDegree(String \cf5 degree\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 degree\cf2  = \cf5 degree\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String getEmail() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 email\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setEmail(String \cf5 email\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 email\cf2  = \cf5 email\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf7 @Override\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  String toString() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf6 "Student [id="\cf2  + \cf3 id\cf2  + \cf6 ", name="\cf2  + \cf3 name\cf2  + \cf6 ", degree="\cf2  + \cf3 degree\cf2  + \cf6 ", email="\cf2  + \cf3 email\cf2  + \cf6 "]"\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\}\cf0\par
+\f1 studdao\par
+\cf1\b\f0 package\cf2\b0  com.demo.dao;\cf0\par
+\par
+\cf1\b import\cf2\b0  com.demo.beans.*;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  StudentDao \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addL(Student \cf5 s\cf2 );\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addF();\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 studdaoimpl\par
+package com.demo.dao;\par
+\par
+import java.util.List;\par
+import java.io.FileOutputStream;\par
+import java.io.ObjectOutputStream;\par
+import java.io.IOException;\par
+import java.util.ArrayList;\par
+import com.demo.beans.*;\par
+\par
+public class StudentDaoImpl implements StudentDao\{\par
+\tab static List<Student> slist;\par
+\tab static \{\par
+\tab\tab slist = new ArrayList<>();\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean addL(Student s) \{\par
+\tab\tab return slist.add(s);\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean addF() \{\par
+\tab\tab try(ObjectOutputStream bw=new ObjectOutputStream(new FileOutputStream("stcsv.txt"));)\{\par
+\tab\tab\tab for(Student s:slist) \{\par
+\tab\tab\tab\tab bw.writeObject(s);\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\}\par
+\tab\tab\tab return true;\par
+\tab\tab\} catch (IOException e) \{\par
+\tab\tab\tab // TODO Auto-generated catch block\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\tab return false;\par
+\tab\}\par
+\tab\par
+\}\par
+studservice\par
+\cf1\b\f0 package\cf2\b0  com.demo.service;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b interface\cf2\b0  StudentService \{\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addInList();\cf0\par
+\par
+\cf2\tab\cf1\b boolean\cf2\b0  addInFile();\cf0\par
+\par
+\cf2\}\cf0\par
+\f1 serviceimpl\par
+package com.demo.service;\par
+\par
+import java.util.Scanner;\par
+import com.demo.beans.*;\par
+import com.demo.dao.*;\par
+\par
+public class StudentServiceImpl implements StudentService \{\par
+\tab private StudentDao stdao;\par
+\tab public StudentServiceImpl() \{\par
+\tab\tab stdao = new StudentDaoImpl();\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean addInList() \{\par
+\tab\tab Scanner sc = new Scanner(System.in);\par
+\tab\tab System.out.println("Enter Student id:");\par
+\tab\tab int id = sc.nextInt();\par
+\tab\tab System.out.println("Enter Student Name");\par
+\tab\tab String name = sc.next();\par
+\tab\tab System.out.println("Enter Student email:");\par
+\tab\tab String email = sc.next();\par
+\tab\tab System.out.println("Enter degree of Student:");\par
+\tab\tab String degree = sc.next();\par
+\tab\tab\par
+\tab\tab Student s = new Student(id,name,email,degree);\par
+\tab\tab\par
+\tab\tab return stdao.addL(s);\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean addInFile() \{\par
+\tab\tab return stdao.addF();\par
+\tab\}\par
+\}\par
+teststud\par
+package com.demo.test;\par
+\par
+import java.util.Scanner;\par
+\par
+import com.demo.service.*;\par
+\par
+public class TestStudent \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Scanner sc = new Scanner(System.in);\par
+\tab\tab StudentService sts = new StudentServiceImpl();\par
+\tab\tab int choice;\par
+\tab\tab do \{\par
+\tab\tab\tab System.out.println("1.add in List\\n 2.exit");\par
+\tab\tab\tab choice=sc.nextInt();\par
+\tab\tab\tab switch(choice) \{\par
+\tab\tab\tab case 1:\par
+\tab\tab\tab\tab boolean status = sts.addInList();\par
+\tab\tab\tab\tab if(status) \{\par
+\tab\tab\tab\tab\tab System.out.println("added Sucessfully");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab else \{\par
+\tab\tab\tab\tab\tab System.out.println("Error");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab case 2:\par
+\tab\tab\tab\tab boolean st = sts.addInFile();\par
+\tab\tab\tab\tab if(st) \{\par
+\tab\tab\tab\tab\tab System.out.println("added Sucessfully");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab else \{\par
+\tab\tab\tab\tab\tab System.out.println("Error");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab default :\par
+\tab\tab\tab\tab System.out.println("Invalid Choice");\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab\}\par
+\tab\tab\}while(choice!=2);\par
+\par
+\tab\}\par
+\par
+\}\par
+\par
+Q16. Write a java program by using executor service for finding addition of 51 numbers\par
+create a task for finding addition of 3 numbers and return it\par
+create executorservice with threadpool of size 5 then submit task to executorservice \par
+Add all Futures to get addition.\par
+beans->myexecutor\par
+package com.demo.beans;\par
+\par
+import java.util.Iterator;\par
+import java.util.concurrent.Callable;\par
+\par
+public class MyExecutor implements Callable<Integer> \{\par
+\tab\par
+\tab private int start,end;\par
+\par
+\tab public MyExecutor(int start, int end) \{\par
+\tab\tab super();\par
+\tab\tab this.start = start;\par
+\tab\tab this.end = end;\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public Integer call() throws Exception \{\par
+\tab\tab System.out.println("start " + "end--->" + Thread.currentThread().getId()+Thread.currentThread().getName());\par
+\tab\tab int s= 0;\par
+\tab\tab for (int i = start; i <=end; i++) \{\par
+\tab\tab\tab s= s+i;\par
+\tab\tab\}return s;\par
+\tab\tab\par
+\tab\}\par
+\tab\par
+\tab\par
+\}\par
+test->myexecutorservice\par
+package com.demo.test;\par
+\par
+import java.util.*;\par
+import java.util.concurrent.ExecutionException;\par
+import java.util.concurrent.ExecutorService;\par
+import java.util.concurrent.Executors;\par
+import java.util.concurrent.Future;\par
+\par
+import com.demo.beans.MyExecutor;\par
+\par
+public class MyTestExecutorService \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab ExecutorService es = Executors.newFixedThreadPool(5);\par
+\tab\tab List<Future> lst = new ArrayList<>();\par
+\tab\tab for(int i=1; i <=51;i=i+3) \{\par
+\tab\tab\tab MyExecutor e1 = new MyExecutor(i, i+3);\par
+\tab\tab\tab Future<Integer> f = es.submit(e1);\par
+\tab\tab\tab lst.add(f);\par
+\tab\tab\}\par
+\tab\tab int sum = 0;\par
+\tab\tab for (Future f1: lst) \{\par
+\tab\tab\tab int ans;\par
+\tab\tab\tab\tab try \{\par
+\tab\tab\tab\tab\tab ans = (Integer) f1.get();\par
+\tab\tab\tab\tab\tab sum = sum + ans;\par
+\tab\tab\tab\tab\} catch (InterruptedException e) \{\par
+\tab\tab\tab\tab\tab // TODO Auto-generated catch block\par
+\tab\tab\tab\tab\tab e.printStackTrace();\par
+\tab\tab\tab\tab\} catch (ExecutionException e) \{\par
+\tab\tab\tab\tab\tab // TODO Auto-generated catch block\par
+\tab\tab\tab\tab\tab e.printStackTrace();\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\par
+\tab\tab\}\par
+\tab\tab System.out.println("Addition: "+ sum);\par
+\tab\tab es.shutdown();\par
+\tab\tab\}\par
+\tab\}\par
+\par
+Q17. Create enum grade and store following objects \par
+Distinction(80,100),First(65,79),Second(50,64),Pass(40,49),Fail(0,39)\par
+ Accept grade from user and display minimum and maximum marks for the grade.\par
+grade\par
+\cf1\b\f0 package\cf2\b0  com.demo.beans;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b enum\cf2\b0  Grade \{\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf3\b\i Distinction\cf2\b0\i0 (80,100),\cf3\b\i First\cf2\b0\i0 (65,79),\cf3\b\i Second\cf2\b0\i0 (50,64),\cf3\b\i Pass\cf2\b0\i0 (40,49),\cf3\b\i Fail\cf2\b0\i0 (0,39);\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 min\cf2 ;\cf0\par
+\cf2\tab\cf1\b private\cf2\b0  \cf1\b int\cf2\b0  \cf3 max\cf2 ;\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab Grade(\cf1\b int\cf2\b0  \cf5 min\cf2 , \cf1\b int\cf2\b0  \cf5 max\cf2 ) \{\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 min\cf2  = \cf5 min\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 max\cf2  = \cf5 max\cf2 ;\cf0\par
+\cf2\tab\tab\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\highlight9\b int\cf2\highlight0\b0  getMin() \{\cf0\par
+\cf2\tab\tab\cf1\highlight9\b return\cf2\b0  \cf3 min\cf2 ;\cf0\highlight0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setMin(\cf1\b int\cf2\b0  \cf5 min\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 min\cf2  = \cf5 min\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b int\cf2\b0  getMax() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf3 max\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setMax(\cf1\b int\cf2\b0  \cf5 max\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf3 max\cf2  = \cf5 max\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf0\par
+\cf2\tab\cf0\par
+\cf2\}\cf0\par
+\f2\fs22\lang9 test\par
+package com.demo.test;\par
+\par
+import java.util.Scanner;\par
+\par
+import com.demo.beans.*;\par
+\par
+public class Marks \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab\par
+\tab\tab Grade g = null;\par
+\tab\tab Scanner sc = new Scanner(System.in);\par
+\tab\tab int choice;\par
+\tab\tab\par
+\tab\tab System.out.println("Enter Choice : \\n1) Distingtion \\n2) first \\n3)Second \\n4)Pass \\n5)Fail");\par
+\tab\tab  choice = sc.nextInt();\par
+\tab\tab\par
+\tab\tab switch(choice) \{\par
+\tab\tab case 1 :\par
+\tab\tab\tab g = Grade.Distinction;\par
+\tab\tab\tab break;\par
+\tab\tab case 2 :\par
+\tab\tab\tab g= Grade.First;\par
+\tab\tab\tab break;\par
+\tab\tab case 3 :\par
+\tab\tab\tab g = Grade.Second;\par
+\tab\tab\tab break;\par
+\tab\tab case 4 :\par
+\tab\tab\tab g = Grade.Pass;\par
+\tab\tab\tab break;\par
+\tab\tab case 5 : \par
+\tab\tab\tab g = Grade.Fail;\par
+\tab\tab\tab break;\par
+\tab\tab default :\par
+\tab\tab\tab System.out.println("Enter Valid Grade");\par
+\tab\tab\tab break;\par
+\tab\tab\}\par
+\tab\tab System.out.println(g);\par
+\tab\tab System.out.println("Min passing marks : "+ g.getMin());\par
+\tab\tab System.out.println("Max Marks : "+g.getMax());\par
+\tab\tab\par
+\tab\}\par
+\par
+\}\par
+\par
+Q7. Write a java program to store List of Commonly found trees \par
+in each city.\par
+The List should be sorted on city names\par
+Accept name of city and list of tree names from user. And perform following:\par
+1. Find list of trees for a city\par
+2. Delete List of a particular city\par
+3. Add new entry in treemap\par
+ Check whether city name already exists\par
+4. Display all city names and List of trees (Use Iterator and foreach)\par
+citytrees\par
+package com.demo.bean;\par
+\par
+import java.util.List;\par
+import java.util.Objects;\par
+\par
+public class CityTrees \{\par
+\tab String cityName;\par
+\tab List<String> Tree;\par
+\tab public CityTrees(String cityName, List<String> tree) \{\par
+\tab\tab super();\par
+\tab\tab this.cityName = cityName;\par
+\tab\tab Tree = tree;\par
+\tab\}\par
+\tab public CityTrees() \{\par
+\tab\tab super();\par
+\tab\}\par
+\tab public String getCityName() \{\par
+\tab\tab return cityName;\par
+\tab\}\par
+\tab public void setCityName(String cityName) \{\par
+\tab\tab this.cityName = cityName;\par
+\tab\}\par
+\tab public List<String> getTree() \{\par
+\tab\tab return Tree;\par
+\tab\}\par
+\tab public void setTree(List<String> tree) \{\par
+\tab\tab Tree = tree;\par
+\tab\}\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "CityTrees [cityName=" + cityName + ", Tree=" + Tree + "]";\par
+\tab\}\par
+\tab\par
+\tab\par
+\tab @Override\par
+\tab public int hashCode() \{\par
+\tab\tab return Objects.hash(cityName);\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean equals(Object obj) \{\par
+\tab\tab CityTrees other = (CityTrees) obj;\par
+\tab\tab return Objects.equals(cityName, other.cityName);\par
+\tab\}\par
+\tab\par
+\}\par
+citytreedao\par
+package com.demo.dao;\par
+\par
+import java.util.ArrayList;\par
+import java.util.Map;\par
+\par
+public interface ICityTreeDao \{\par
+\par
+\tab ArrayList<String> getCity(String city);\par
+\par
+\tab boolean removeCity(String city);\par
+\par
+\tab void addCityTree(String city, ArrayList<String> arr);\par
+\par
+\tab Map<String,ArrayList<String>> getData();\par
+\par
+\}\par
+daoimpl\par
+package com.demo.dao;\par
+\par
+import java.util.List;\par
+import java.util.Map;\par
+import java.util.ArrayList;\par
+import java.util.Arrays;\par
+import java.util.TreeMap;\par
+\par
+\par
+public class CityTreeDao implements ICityTreeDao\{\par
+\par
+\tab static Map<String,ArrayList<String>> tmap;\par
+\tab static \{\par
+\tab\tab tmap=new TreeMap<>();\par
+\tab\tab tmap.put("Pune", new ArrayList<String>(Arrays.asList("Mango","Apple","Coconut")));\par
+\tab\}\par
+\tab @Override\par
+\tab public ArrayList<String> getCity(String city) \{\par
+\tab\tab ArrayList<String> arr=new ArrayList<>();\par
+\tab\tab arr=tmap.get(city);\par
+\tab\tab return arr;\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean removeCity(String city) \{\par
+\tab\tab if(tmap.remove(city)!=null) \{\par
+\tab\tab\tab return true;\par
+\tab\tab\}\par
+\tab\tab return false;\par
+\tab\}\par
+\tab @Override\par
+\tab public void addCityTree(String city, ArrayList<String> arr) \{\par
+\tab\tab\par
+\tab\tab tmap.put(city, arr);\par
+\tab\tab\par
+\tab\}\par
+\tab @Override\par
+\tab public Map<String, ArrayList<String>> getData() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab return tmap;\par
+\tab\}\par
+\tab\par
+\tab\par
+\tab\par
+\tab\par
+\}\par
+citytreeservice\par
+package com.demo.service;\par
+\par
+public interface IcityTreeService \{\par
+\par
+\tab void findByCity();\par
+\par
+\tab void deleteCity();\par
+\par
+\tab void addCity();\par
+\par
+\tab void displayAll();\par
+\par
+\}\par
+serviceimpl\par
+package com.demo.service;\par
+import java.util.Scanner;\par
+import java.util.ArrayList;\par
+\par
+import com.demo.dao.*;\par
+public class CityTreeService implements IcityTreeService\{\par
+\tab\par
+\tab ICityTreeDao obj=new CityTreeDao();\par
+\tab Scanner sc=new Scanner(System.in);\par
+\par
+\tab @Override\par
+\tab public void findByCity() \{\par
+\tab\tab System.out.println("Enter city :");\par
+\tab\tab String city=sc.next();\par
+\tab\tab\par
+\tab\tab System.out.println(obj.getCity(city));\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void deleteCity() \{\par
+\tab\tab System.out.println("Enter city :");\par
+\tab\tab String city=sc.next();\par
+\tab\tab\par
+\tab\tab if(obj.removeCity(city)) \{\par
+\tab\tab\tab System.out.println("Deleted");\par
+\tab\tab\}\par
+\tab\tab else \{\par
+\tab\tab\tab System.out.println("Error");\par
+\tab\tab\}\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void addCity() \{\par
+\tab\tab\par
+\tab\tab ArrayList<String> arr=new ArrayList<>();\par
+\tab\tab System.out.println("Enter City Name :");\par
+\tab\tab String city=sc.next();\par
+\tab\tab int a;\par
+\tab\tab do \{\par
+\tab\tab\tab System.out.println("Enter Tree Name");\par
+\tab\tab\tab String tree=sc.next();\par
+\tab\tab\tab arr.add(tree);\par
+\tab\tab\tab System.out.println("1 to continue 0 to exit");\par
+\tab\tab\tab a=sc.nextInt();\par
+\tab\tab\tab\par
+\tab\tab\}while(a!=0);\par
+\tab\tab\par
+\tab\tab obj.addCityTree(city,arr);\par
+\tab\tab System.out.println("Done");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void displayAll() \{\par
+\tab\tab\par
+\tab\tab for(String a:obj.getData().keySet()) \{\par
+\tab\tab\tab System.out.println("City : "+a+" Trees : "+obj.getData().get(a));\par
+\tab\tab\}\par
+\tab\tab\par
+\tab\}\par
+\par
+\}\par
+citytest\par
+package com.demo.test;\par
+import java.util.Scanner;\par
+import com.demo.service.*;\par
+\par
+//import java.util.*;\par
+public class CityTreeTest \{\par
+\tab\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Scanner sc= new Scanner(System.in);\par
+\tab\tab IcityTreeService obj=new CityTreeService();\par
+\tab\tab\par
+\tab\tab System.out.println("1. Find Trees by City, 2. Delete City 3. Add City, 4.Display All\\nChoice :");\par
+\tab\tab int choice =sc.nextInt();\par
+\tab\tab\par
+\tab\tab switch(choice) \{\par
+\tab\tab case 1:\par
+\tab\tab\tab obj.findByCity();\par
+\tab\tab\tab break;\par
+\tab\tab case 2:\par
+\tab\tab\tab obj.deleteCity();\par
+\tab\tab\tab break;\par
+\tab\tab case 3:\par
+\tab\tab\tab obj.addCity();\par
+\tab\tab\tab break;\par
+\tab\tab case 4:\par
+\tab\tab\tab obj.displayAll();\par
+\tab\tab\tab break;\par
+\tab\tab case 5:\par
+\tab\tab\tab break;\par
+\tab\tab\}\par
+\tab\tab\par
+\tab\par
+\tab\}\par
+\par
+\}\par
+Q8.\par
+Add following option in Q7. assignment\par
+5. Add a new tree in existing list\par
+6. Accept tree name from user. Display all cities in which the tree exists\par
+package com.demo.bean;\par
+\par
+import java.util.List;\par
+import java.util.Objects;\par
+\par
+public class CityTrees \{\par
+\tab String cityName;\par
+\tab List<String> Tree;\par
+\tab public CityTrees(String cityName, List<String> tree) \{\par
+\tab\tab super();\par
+\tab\tab this.cityName = cityName;\par
+\tab\tab Tree = tree;\par
+\tab\}\par
+\tab public CityTrees() \{\par
+\tab\tab super();\par
+\tab\}\par
+\tab public String getCityName() \{\par
+\tab\tab return cityName;\par
+\tab\}\par
+\tab public void setCityName(String cityName) \{\par
+\tab\tab this.cityName = cityName;\par
+\tab\}\par
+\tab public List<String> getTree() \{\par
+\tab\tab return Tree;\par
+\tab\}\par
+\tab public void setTree(List<String> tree) \{\par
+\tab\tab Tree = tree;\par
+\tab\}\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "CityTrees [cityName=" + cityName + ", Tree=" + Tree + "]";\par
+\tab\}\par
+\tab\par
+\tab\par
+\tab @Override\par
+\tab public int hashCode() \{\par
+\tab\tab return Objects.hash(cityName);\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean equals(Object obj) \{\par
+\tab\tab CityTrees other = (CityTrees) obj;\par
+\tab\tab return Objects.equals(cityName, other.cityName);\par
+\tab\}\par
+\tab\par
+\}\par
+daoimpl\par
+package com.demo.dao;\par
+\par
+import java.util.List;\par
+import java.util.Map;\par
+import java.util.ArrayList;\par
+import java.util.Arrays;\par
+import java.util.TreeMap;\par
+\par
+\par
+public class CityTreeDao implements ICityTreeDao\{\par
+\par
+\tab static Map<String,ArrayList<String>> tmap;\par
+\tab static \{\par
+\tab\tab tmap=new TreeMap<>();\par
+\tab\tab tmap.put("Pune", new ArrayList<String>(Arrays.asList("Mango","Apple","Coconut")));\par
+\tab\tab tmap.put("Mumbai", new ArrayList<String>(Arrays.asList("Mango","Banana","Coconut")));\par
+\par
+\tab\}\par
+\tab @Override\par
+\tab public ArrayList<String> getCity(String city) \{\par
+\tab\tab ArrayList<String> arr=new ArrayList<>();\par
+\tab\tab arr=tmap.get(city);\par
+\tab\tab return arr;\par
+\tab\}\par
+\tab @Override\par
+\tab public boolean removeCity(String city) \{\par
+\tab\tab if(tmap.remove(city)!=null) \{\par
+\tab\tab\tab return true;\par
+\tab\tab\}\par
+\tab\tab return false;\par
+\tab\}\par
+\tab @Override\par
+\tab public void addCityTree(String city, ArrayList<String> arr) \{\par
+\tab\tab\par
+\tab\tab tmap.put(city, arr);\par
+\tab\tab\par
+\tab\}\par
+\tab @Override\par
+\tab public Map<String, ArrayList<String>> getData() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab return tmap;\par
+\tab\}\par
+\tab @Override\par
+\tab public ArrayList<String> getByTree(String tree) \{\par
+\tab\tab\par
+\tab\tab ArrayList<String> lst=new ArrayList<>();\par
+\tab\tab\par
+\tab\tab for(String a :tmap.keySet()) \{\par
+\tab\tab\tab //System.out.println("inside dao loop");\par
+\tab\tab\tab if(tmap.get(a).contains(tree)) \{\par
+\tab\tab\tab\tab lst.add(a);\par
+\tab\tab\tab\};\par
+\tab\tab\}\par
+\tab\tab //System.out.println("Loop complete"+lst);\par
+\tab\tab return lst;\par
+\tab\tab\par
+\tab\}\par
+\tab\par
+\tab\par
+\tab\par
+\tab\par
+\}\par
+citydao\par
+package com.demo.dao;\par
+\par
+import java.util.ArrayList;\par
+import java.util.Map;\par
+\par
+public interface ICityTreeDao \{\par
+\par
+\tab ArrayList<String> getCity(String city);\par
+\par
+\tab boolean removeCity(String city);\par
+\par
+\tab void addCityTree(String city, ArrayList<String> arr);\par
+\par
+\tab Map<String,ArrayList<String>> getData();\par
+\par
+\tab ArrayList<String> getByTree(String tree);\par
+\par
+\}\par
+service\par
+package com.demo.service;\par
+\par
+public interface IcityTreeService \{\par
+\par
+\tab void findByCity();\par
+\par
+\tab void deleteCity();\par
+\par
+\tab void addCity();\par
+\par
+\tab void displayAll();\par
+\par
+\tab void findByTree();\par
+\par
+\}\par
+serviceimpl\par
+package com.demo.service;\par
+import java.util.Scanner;\par
+import java.util.ArrayList;\par
+\par
+import com.demo.dao.*;\par
+public class CityTreeService implements IcityTreeService\{\par
+\tab\par
+\tab ICityTreeDao obj=new CityTreeDao();\par
+\tab Scanner sc=new Scanner(System.in);\par
+\par
+\tab @Override\par
+\tab public void findByCity() \{\par
+\tab\tab System.out.println("Enter city :");\par
+\tab\tab String city=sc.next();\par
+\tab\tab\par
+\tab\tab System.out.println(obj.getCity(city));\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void deleteCity() \{\par
+\tab\tab System.out.println("Enter city :");\par
+\tab\tab String city=sc.next();\par
+\tab\tab\par
+\tab\tab if(obj.removeCity(city)) \{\par
+\tab\tab\tab System.out.println("Deleted");\par
+\tab\tab\}\par
+\tab\tab else \{\par
+\tab\tab\tab System.out.println("Error");\par
+\tab\tab\}\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void addCity() \{\par
+\tab\tab\par
+\tab\tab ArrayList<String> arr=new ArrayList<>();\par
+\tab\tab System.out.println("Enter City Name :");\par
+\tab\tab String city=sc.next();\par
+\tab\tab int a;\par
+\tab\tab do \{\par
+\tab\tab\tab System.out.println("Enter Tree Name");\par
+\tab\tab\tab String tree=sc.next();\par
+\tab\tab\tab arr.add(tree);\par
+\tab\tab\tab System.out.println("1 to continue 0 to exit");\par
+\tab\tab\tab a=sc.nextInt();\par
+\tab\tab\tab\par
+\tab\tab\}while(a!=0);\par
+\tab\tab\par
+\tab\tab obj.addCityTree(city,arr);\par
+\tab\tab System.out.println("Done");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void displayAll() \{\par
+\tab\tab\par
+\tab\tab for(String a:obj.getData().keySet()) \{\par
+\tab\tab\tab System.out.println("City : "+a+" Trees : "+obj.getData().get(a));\par
+\tab\tab\}\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void findByTree() \{\par
+\tab\tab System.out.println("Enter Tree :");\par
+\tab\tab String tree=sc.next();\par
+\tab\tab\par
+\tab\tab\par
+\tab\tab obj.getByTree(tree).stream().forEach(ob->System.out.println(ob));\par
+\tab\tab\par
+\tab\tab\par
+\tab\}\par
+\par
+\}\par
+test\par
+package com.demo.test;\par
+import java.util.Scanner;\par
+import com.demo.service.*;\par
+\par
+//import java.util.*;\par
+public class CityTreeTest \{\par
+\tab\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Scanner sc= new Scanner(System.in);\par
+\tab\tab IcityTreeService obj=new CityTreeService();\par
+\tab\tab\par
+\tab\tab System.out.println("1. Find Trees by City, 2. Delete City 3. Add City, ");\par
+\tab\tab System.out.println("4.Display All 5. Find City By Tree \\nChoice :");\par
+\tab\tab\par
+\tab\tab int choice =0;\par
+\tab\tab while(choice!=6) \{\par
+\tab\tab\tab choice =sc.nextInt();\par
+\tab\tab\tab switch(choice) \{\par
+\tab\tab\tab\tab case 1:\par
+\tab\tab\tab\tab\tab obj.findByCity();\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab case 2:\par
+\tab\tab\tab\tab\tab obj.deleteCity();\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab case 3:\par
+\tab\tab\tab\tab\tab obj.addCity();\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab case 4:\par
+\tab\tab\tab\tab\tab obj.displayAll();\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab case 5:\par
+\tab\tab\tab\tab\tab obj.findByTree();\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab case 6:\par
+\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\}\par
+\tab\tab\par
+\tab\tab\}\par
+\tab\}\par
+\par
+\}\par
+}
+ 
